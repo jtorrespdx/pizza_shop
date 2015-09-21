@@ -24,11 +24,12 @@ Pizza.prototype.totalPrice = function() {
     return pizzaPrice;
 }
 
-$(document).ready(function) {
+$(document).ready(function() {
     $("#add-pizza-toppings").click(function(event) {
         event.preventDefault():
-        $("pizza-toppings").append(
-            '<div class="form-group new-pizza-toppings">' +
+
+        $("#new-pizza-topping").append(
+            '<div class="form-group new-pizza-topping">' +
                 '<select id="pizza-toppings">' +
                     '<option value="Pepperoni">Pepperoni</option>' +
                     '<option value="Sausage">Sausage</option>' +
@@ -39,7 +40,17 @@ $(document).ready(function) {
                     '<option value="Mushroom">Mushroom</option>' +
                     '<option value="Spinach">Spinach</option>' +
                 '</select>' +
-            '</div>'
-        )
+            '</div>')
     });
-}
+
+    $("form#new-pizza").submit(function(event) {
+   event.preventDefault();
+
+   var pizzaQuantity = parseInt($("input#pizza-quantity").val());
+   var pizzaSize = $("select#pizza-size").val();
+   var pizzaToppings = [];
+
+   $(".new-topping")each(function() {
+       pizzaToppings.push($"select#")
+   })
+});

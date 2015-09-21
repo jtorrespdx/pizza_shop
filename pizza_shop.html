@@ -28,18 +28,11 @@
                             </select>
                         </div>
                     <h3>Choose additional toppings. Only $1 each!</h3>
-                        <div class="form-group">
-                            <select class="form control" name="pizza-toppings">
-                                <option value="Pepperoni">Pepperoni</option>
-                                <option value="Sausage">Sausage</option>
-                                <option value="Chicken">Chicken</option>
-                                <option value="Ham">Ham</option>
-                                <option value="Tomatoe">Tomatoe</option>
-                                <option value="Olive">Olive</option>
-                                <option value="Mushroom">Mushroom</option>
-                                <option value="Spinach">Spinach</option>
-                            </select>
-                        </div>
+                    <div id="new-pizza-topping">
+                    <div class="form-group">
+                      <button id="add-pizza-toppings" class="btn btn-default">Add toppings!</button>
+                    </div>
+                    </div>
                     <h3>How many pizzas?</h3>
                         <div class="form-group">
                           <label for="pizza-quantity">Don't let anyone stay hungry.</label>
@@ -50,9 +43,11 @@
                     </form>
                 </div>
                 <div class="col-md-4">
-                    <h3>Pizza Total</h3>
-                    <h3>$<span id="pizza-price"></span></h3>   
+                    <div id="results">
+                        <h2>Pizza Total</h2>
+                        <h2>$<span id="pizza-price"></span></h2>
+                    </div>
+                </div>
             </div>
-        </div>
     </body>
 </html>
