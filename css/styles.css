@@ -1,3 +1,4 @@
 BODY {
     background-image: url(pizza.jpg);
+    background-attachment: fixed;
 }
