@@ -9,8 +9,13 @@ describe('Pizza', function() {
     expect(testPizza.pizzaToppings).to.eql(["cheese", "pepperoni"]);
   });
 
-  it("allows customer to add multiple toppings to a pizza.", function(){
+  it("allows customer to add multiple toppings to a pizza.", function() {
       var testPizza = new Pizza (1, "medium", ["sausage", "mushroom", "pepperoni"]);
       expect(testPizza.pizzaToppings).to.eql(["sausage", "mushroom", "pepperoni"]);
+  });
+
+  it("shows a price of $8 for a small pizza.", function() {
+      var testPizza = new Pizza (1, "small");
+      expect(testPizza.totalPrice()).to.equal(8);
   });
 });
