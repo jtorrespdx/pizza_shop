@@ -29,18 +29,23 @@ describe('Pizza', function() {
       expect(testPizza.totalPrice()).to.equal(14);
   });
 
-  it("shows a price of 16 if two small pizzas are ordered.", function() {
+  it("shows a price of $16 if two small pizzas are ordered.", function() {
       var testPizza  = new Pizza (2, "small");
       expect(testPizza.totalPrice()).to.equal(16);
   });
 
-  it("shows a price of 24 if two medium pizzas are ordered.", function() {
+  it("shows a price of $24 if two medium pizzas are ordered.", function() {
       var testPizza  = new Pizza (2, "medium");
       expect(testPizza.totalPrice()).to.equal(24);
   });
 
-  it("shows a price of 28 if two large pizzas are ordered.", function() {
+  it("shows a price of $28 if two large pizzas are ordered.", function() {
       var testPizza  = new Pizza (2, "large");
       expect(testPizza.totalPrice()).to.equal(28);
+  });
+
+  it("adds $1 to the price of a pizza for every topping added.", function() {
+      var testPizza  = new Pizza (1, "small", ["sausage", "mushroom", "pepperoni"]);
+      expect(testPizza.totalPrice()).to.equal(11);
   });
 });

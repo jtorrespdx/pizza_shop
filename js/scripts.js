@@ -15,6 +15,15 @@ Pizza.prototype.totalPrice = function() {
     } else if(this.pizzaSize === "large") {
         pizzaPrice = 14 * this.quantity;
     }
+    if (this.pizzaToppings !== undefined) {
+        this.pizzaToppings.forEach(function(pizzaToppings) {
+            pizzaPrice += 1;
+        });
+    }
 
     return pizzaPrice;
+}
+
+$(document).ready(function) {
+
 }
