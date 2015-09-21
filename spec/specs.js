@@ -18,4 +18,9 @@ describe('Pizza', function() {
       var testPizza = new Pizza (1, "small");
       expect(testPizza.totalPrice()).to.equal(8);
   });
+
+  it("shows a price of $12 for a medium pizza.", function() {
+      var testPizza = new Pizza (1, "medium");
+      expect(testPizza.totalPrice()).to.equal(12);
+  });
 });
