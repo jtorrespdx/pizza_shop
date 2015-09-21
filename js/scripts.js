@@ -46,11 +46,17 @@ $(document).ready(function() {
     $("form#new-pizza").submit(function(event) {
    event.preventDefault();
 
-   var pizzaQuantity = parseInt($("input#pizza-quantity").val());
-   var pizzaSize = $("select#pizza-size").val();
-   var pizzaToppings = [];
+       var pizzaQuantity = parseInt($("input#pizza-quantity").val());
+       var pizzaSize = $("select#pizza-size").val();
+       var pizzaToppings = [];
 
-   $(".new-topping")each(function() {
-       pizzaToppings.push($"select#")
-   })
+       $(".new-topping").each(function() {
+           pizzaToppings.push($("select#pizza-toppings").val());
+       });
+
+       var newPizzaPrice = new Pizza(pizzaQuantity, pizzaSize, pizzaToppings);
+
+       $("#pizza-price").text(newPizzaPrice.totalPrice());
+       $("#results").show();
+    });
 });
