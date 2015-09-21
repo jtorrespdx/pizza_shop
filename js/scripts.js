@@ -9,7 +9,7 @@ Pizza.prototype.totalPrice = function() {
     var pizzaPrice = 0;
 
     if(this.pizzaSize === "small") {
-        pizzaPrice = 8;
+        pizzaPrice = 8 * this.quantity;
     } else if(this.pizzaSize === "medium") {
         pizzaPrice = 12;
     } else if(this.pizzaSize === "large") {
