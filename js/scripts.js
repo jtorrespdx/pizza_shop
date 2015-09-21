@@ -25,5 +25,21 @@ Pizza.prototype.totalPrice = function() {
 }
 
 $(document).ready(function) {
-
+    $("#add-pizza-toppings").click(function(event) {
+        event.preventDefault():
+        $("pizza-toppings").append(
+            '<div class="form-group new-pizza-toppings">' +
+                '<select id="pizza-toppings">' +
+                    '<option value="Pepperoni">Pepperoni</option>' +
+                    '<option value="Sausage">Sausage</option>' +
+                    '<option value="Chicken">Chicken</option>' +
+                    '<option value="Ham">Ham</option>' +
+                    '<option value="Tomatoe">Tomatoe</option>' +
+                    '<option value="Olive">Olive</option>' +
+                    '<option value="Mushroom">Mushroom</option>' +
+                    '<option value="Spinach">Spinach</option>' +
+                '</select>' +
+            '</div>'
+        )
+    });
 }
