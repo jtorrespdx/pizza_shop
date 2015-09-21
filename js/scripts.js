@@ -26,7 +26,7 @@ Pizza.prototype.totalPrice = function() {
 
 $(document).ready(function() {
     $("#add-pizza-toppings").click(function(event) {
-        event.preventDefault():
+        event.preventDefault();
 
         $("#new-pizza-topping").append(
             '<div class="form-group new-pizza-topping">' +
