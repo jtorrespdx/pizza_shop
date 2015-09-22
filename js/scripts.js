@@ -30,24 +30,26 @@ $(document).ready(function() {
 
         $("#new-pizza-topping").append(
             '<div class="form-group new-pizza-topping">' +
-                '<select id="pizza-toppings">' +
-                    '<option value="Pepperoni">Pepperoni</option>' +
-                    '<option value="Sausage">Sausage</option>' +
-                    '<option value="Chicken">Chicken</option>' +
-                    '<option value="Ham">Ham</option>' +
-                    '<option value="Tomatoe">Tomatoe</option>' +
-                    '<option value="Olive">Olive</option>' +
-                    '<option value="Mushroom">Mushroom</option>' +
-                    '<option value="Spinach">Spinach</option>' +
-                '</select>' +
+                '<div class="col-xs-4">' +
+                    '<select class="form-control" id="pizza-toppings">' +
+                        '<option value="Pepperoni">Pepperoni</option>' +
+                        '<option value="Sausage">Sausage</option>' +
+                        '<option value="Chicken">Chicken</option>' +
+                        '<option value="Ham">Ham</option>' +
+                        '<option value="Tomatoe">Tomatoe</option>' +
+                        '<option value="Olive">Olive</option>' +
+                        '<option value="Mushroom">Mushroom</option>' +
+                        '<option value="Spinach">Spinach</option>' +
+                    '</select>' +
+                '</div>' +
             '</div>')
     });
 
     $("form#new-pizza").submit(function(event) {
    event.preventDefault();
 
-       var quantity = parseInt($("input#pizza-quantity").val());
-       var pizzaSize = $("select#pizza-size").val();
+       var quantity = parseInt($("#pizza-quantity").val());
+       var pizzaSize = $("#pizza-size").val();
        var pizzaToppings = [];
 
        $(".new-pizza-topping").each(function() {
@@ -58,5 +60,6 @@ $(document).ready(function() {
 
        $("#pizza-price").text(newPizzaPrice.totalPrice());
        $("#results").show();
+
     });
 });
